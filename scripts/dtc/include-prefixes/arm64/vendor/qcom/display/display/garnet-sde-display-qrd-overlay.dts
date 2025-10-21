@@ -1,0 +1,12 @@
+/dts-v1/;
+/plugin/;
+
+#include "garnet-sde-display-qrd.dtsi"
+
+/{
+	model = "Qualcomm Technologies, Inc. Garnet based on SM7435";
+	compatible = "qcom,parrot-qrd", "qcom,parrot", "qcom,qrd";
+	qcom,msm-id = <0x247 0x10000 0x219 0x10000 0x265 0x10000>;
+	qcom,board-id = <0x1000B 0x0>;
+	xiaomi,miboard-id = <0x11 0x0>;
+};

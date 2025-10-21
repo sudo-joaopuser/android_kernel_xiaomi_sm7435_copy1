@@ -1,0 +1,43 @@
+&qupv3_se2_i2c {
+	wl2866d@28 {
+		compatible = "xiaomi,wl2866d-pmic";
+		pinctrl-0 = <&wl2866d_enable_active>;
+		pinctrl-1 = <&wl2866d_enable_suspend>;
+		pinctrl-names = "wl2866d_enable", "wl2866d_disable";
+		reg = <0x28>;
+		vin1-supply = <&S8E>;
+		vin2-supply = <&BOB>;
+		wl2866d_dvdd1: wl2866d-regulator@0 {
+			cell-index = <0x0>;
+			reg = [03];
+			regulator-max-microvolt = <0x1B7740>;
+			regulator-min-microvolt = <0x927C0>;
+			regulator-name = "wl2866d_dvdd1";
+			type = "dvdd";
+		};
+		wl2866d_dvdd2: wl2866d-regulator@1 {
+			cell-index = <0x1>;
+			reg = [04];
+			regulator-max-microvolt = <0x1B7740>;
+			regulator-min-microvolt = <0x927C0>;
+			regulator-name = "wl2866d_dvdd2";
+			type = "dvdd";
+		};
+		wl2866d_avdd1: wl2866d-regulator@2 {
+			cell-index = <0x2>;
+			reg = [05];
+			regulator-max-microvolt = <0x419CE0>;
+			regulator-min-microvolt = <0x124F80>;
+			regulator-name = "wl2866d_avdd1";
+			type = "avdd";
+		};
+		wl2866d_avdd2: wl2866d-regulator@3 {
+			cell-index = <0x3>;
+			reg = [06];
+			regulator-max-microvolt = <0x419CE0>;
+			regulator-min-microvolt = <0x124F80>;
+			regulator-name = "wl2866d_avdd2";
+			type = "avdd";
+		};
+	};
+};

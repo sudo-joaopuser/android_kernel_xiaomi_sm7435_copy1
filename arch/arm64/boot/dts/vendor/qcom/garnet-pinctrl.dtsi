@@ -1,0 +1,16 @@
+/*for ganret pinctrl */
+
+&tlmm {
+    aw882xx_irq_active_top: aw882xx_irq_active_top {
+        config {
+            bias-pull-up;
+            drive-strength = <0x2>;
+            input-enable;
+            pins = "gpio107";
+        };
+        mux {
+            function = "gpio";
+            pins = "gpio107";
+        };
+    };
+};
